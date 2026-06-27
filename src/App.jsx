@@ -7,7 +7,7 @@ import Keys from './components/Keys';
 import Logs from './components/Logs';
 
 // Define the host URL. In development, target port 5000, in production it serves from the same domain.
-const API_HOST = window.location.hostname === 'localhost' ? 'http://localhost:5000' : '';
+const API_HOST = window.location.hostname === 'localhost' ? 'http://localhost:5000' : window.location.origin;
 
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem('whyop_token') || '');
