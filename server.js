@@ -25,7 +25,7 @@ app.use('/api/logs', logRoutes);
 app.use('/api/v1', verifyRoutes);
 
 // Serve static frontend assets in production mode
-const frontendBuildPath = path.join(__dirname, '../frontend/dist');
+const frontendBuildPath = path.join(__dirname, 'dist');
 app.use(express.static(frontendBuildPath));
 
 // Fallback index.html mapping for React Router routes.
